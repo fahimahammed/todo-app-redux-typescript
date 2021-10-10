@@ -37,11 +37,14 @@ const getVisibleTodos = (todos: TodoModel[], filter: string): TodoModel[] => {
   }
 };
 
+// console.log(todos)
+
 const ToDoList = ({
   todoItems,
   toggleTodo,
 }: {
   todoItems: TodoModel[];
+
   toggleTodo: (id: number) => void;
 }) => {
 

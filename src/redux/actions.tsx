@@ -9,8 +9,8 @@ export const SET_FILTER = "SET_FILTER";
 
 
 let nextId: number = 0;
-//s
 
+// add item
 export const addItem = (value: string): TodoActionTypes => ({
   type: ADD_ITEM,
   nextId: nextId++,

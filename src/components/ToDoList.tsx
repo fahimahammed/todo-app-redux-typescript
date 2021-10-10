@@ -1,13 +1,16 @@
 import React from "react";
 import { ToDoItem } from "./ToDoItem";
+
 import {
   FILTER_ALL,
   FILTER_ACTIVE,
   FILTER_COMPLETE,
   toggleTodo,
 } from "../redux/actions";
+
 import { connect } from "react-redux";
 import { TodoModel, RootState } from "../redux/types";
+
 const mapStateToProps = (state: RootState) => {
   return {
     todoItems: getVisibleTodos(state.todoItems, state.visibilityFilter),
@@ -15,7 +18,7 @@ const mapStateToProps = (state: RootState) => {
 };
 
 const mapDispatchToProps = {
-  toggleTodo,
+  toggleTodo
 };
 
 const getVisibleTodos = (todos: TodoModel[], filter: string): TodoModel[] => {
@@ -41,8 +44,9 @@ const ToDoList = ({
   todoItems: TodoModel[];
   toggleTodo: (id: number) => void;
 }) => {
+
   return (
-    <>
+    <div>
       {todoItems.map((c: TodoModel) => (
         <ToDoItem
           onToggleClick={toggleTodo}
@@ -52,7 +56,7 @@ const ToDoList = ({
           text={c.text}
         ></ToDoItem>
       ))}
-    </>
+    </div>
   );
 };
 export default connect(mapStateToProps, mapDispatchToProps)(ToDoList);

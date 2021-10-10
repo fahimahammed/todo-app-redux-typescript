@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+
 export const ToDoItem = ({
   id,
   text,
@@ -17,8 +18,9 @@ export const ToDoItem = ({
       onToggleClick(id);
     }
   };
+
   return (
-    <>
+    
       <div>
         <input
           ref={radio}
@@ -32,6 +34,6 @@ export const ToDoItem = ({
           {text}
         </span>
       </div>
-    </>
+    
   );
 };

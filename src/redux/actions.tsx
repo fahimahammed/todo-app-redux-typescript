@@ -17,11 +17,13 @@ export const addItem = (value: string): TodoActionTypes => ({
   value,
 });
 
+// toggle todo
 export const toggleTodo = (id: number): TodoActionTypes => ({
   type: TOGGLE_TODO,
   id,
 });
 
+// filter data
 export const setFilter = (filter: string): TodoActionTypes => ({
   type: SET_FILTER,
   value: filter,

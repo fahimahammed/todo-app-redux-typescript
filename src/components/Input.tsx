@@ -2,6 +2,8 @@ import React from "react";
 import { addItem } from "../redux/actions";
 import { connect } from "react-redux";
 import { TodoActionTypes } from "../redux/types";
+
+
 const mapDispatchToProps = {
   addItem,
 };
@@ -16,6 +18,8 @@ const Input = ({ addItem }: { addItem: (item: string) => TodoActionTypes }) => {
       e.target.value = "";
     }
   };
+
+
   return (
     <div>
 
@@ -24,7 +28,7 @@ const Input = ({ addItem }: { addItem: (item: string) => TodoActionTypes }) => {
         id="todoText"
         type="text"
         onKeyDown={handleKeyDown}
-        placeholder="Add an item and press Enter"
+        placeholder="Add an item and press ENTER"
       />
     </div>
   );

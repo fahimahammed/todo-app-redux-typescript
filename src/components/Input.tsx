@@ -17,15 +17,16 @@ const Input = ({ addItem }: { addItem: (item: string) => TodoActionTypes }) => {
     }
   };
   return (
-    <>
+    <div>
+
       <input
-        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-600 leading-tight focus:outline-none focus:shadow-outline"
         id="todoText"
         type="text"
         onKeyDown={handleKeyDown}
         placeholder="Add an item and press Enter"
       />
-    </>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@ function App() {
         <div className="mb-4">
           <form
             onSubmit={handleSubmit}
-            className="bg-white shadow-md rounded px-8 pt-6 pb-4 mb-4"
+            className="bg-blue-200 shadow-md rounded px-5 pt-8 pb-5 mb-4"
           >
             <Input></Input>
             <Filter></Filter>
